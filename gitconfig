@@ -1,0 +1,19 @@
+[user]
+	name = Ben Murphy
+	email = bamurph@gmail.com
+[core]
+	quotepath = false
+	excludesfile = /Users/bamurphymac/.gitignore
+[mergetool]
+	keepBackup = true
+[github]
+	user = bamurphymac
+	token = 1faa7ae76d22ce59fba061dc23a4b8f8
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[core]
+  editor = "subl -Wn"
