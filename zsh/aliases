@@ -1,5 +1,10 @@
-# cd
-alias ..='cd ..'
+ # cd
+ alias ..='cd ..'
+
+# Basic
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zreload="source ~/.zshrc"
 
 # ls
 alias ls="ls -F"
@@ -29,5 +34,41 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+# logging with amon
+alias collect_logs='sudo /usr/local/amon/amond start'
+alias amon_start='/usr/local/amon/amon start'
+
 # commands starting with % for pasting from web
 alias %=' '
+# Nginx
+alias nginxconfig="sudo subl -o /usr/local/etc/nginx/nginx.conf"
+alias nginxreload="sudo nginx -s reload"
+alias nginxstop="sudo nginx -s stop"
+alias nginxstart="sudo nginx -s start"
+
+alias access_logs="/usr/local/Cellar/nginx/1.0.14/logs/access.log"
+alias error_logs="/usr/local/Cellar/nginx/1.0.14/logs/error.log"
+
+# Redis
+
+alias redisstart='sudo launchctl start io.redis.redis-server'
+alias redisstop='sudo launchctl stop io.redis.redis-server'
+
+# Splunk
+# located at /Applications/splunk
+# server at  http://dynastyowner.local:8000
+alias splunk="/Applications/splunk/bin/splunk start"
+
+# Chrome
+
+alias chrome-remote='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
+
+#S
+
+# Bundler Aliases from http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bil="bi --local"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 've

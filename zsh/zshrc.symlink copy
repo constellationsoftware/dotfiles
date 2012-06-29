@@ -1,11 +1,19 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.dotfiles/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="dogenpunk"
+
+source aliases.zsh
+source completion.zsh
+source config.zsh
+source prompt.zsh
+source window.zsh
+source functions
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -29,8 +37,16 @@ ZSH_THEME="dogenpunk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git git-flow bundler brew osx rake ruby rails textmate cap gem compleat github node npm)
 
 source $ZSH/oh-my-zsh.sh
+export USE_BUNDLER=force
+export PATH=:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:~/bin:$HOME/.rvm/bin:$HOME/.rvm/scripts/rvm
+
 
 # Customize to your needs...
+fpath=($HOME/.zsh/func $fpath)
+typeset -U fpath
+
+export PATH=$PATH:/usr/local/sbin/:/usr/local/bin:/usr/local/:/bin:/sbin
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
